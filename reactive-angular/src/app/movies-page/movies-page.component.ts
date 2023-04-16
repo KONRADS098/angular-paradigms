@@ -3,7 +3,7 @@ import { MovieModel } from '../shared-models/src/lib/movie.model';
 import { Store } from '@ngrx/store';
 import { MoviesPageActions } from '../actions';
 import { Observable } from 'rxjs';
-import { selectActiveMovie, selectAllMovies } from '../state';
+import { selectActiveMovie, selectAllMovies } from '../shared-state';
 
 @Component({
   selector: 'tam-movies-page',

@@ -16,7 +16,7 @@ import { MovieDetailComponent } from './components/movie-detail/movie-detail.com
 import { MoviesListComponent } from './components/movies-list/movies-list.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MoviesApiEffects } from './movie-api.effects';
-import { SharedStateMoviesModule } from './state';
+import { SharedStateMoviesModule } from './shared-state';
 
 @NgModule({
   declarations: [
