@@ -1,0 +1,17 @@
+<div class="container">
+  <tam-movies-list
+    class="col-50"
+    [movies]="movies"
+    (select)="onSelect($event)"
+    (delete)="onDelete($event)"
+  >
+  </tam-movies-list>
+
+  <tam-movie-detail
+    class="col-50"
+    [movie]="currentMovie"
+    (save)="onSave($event)"
+    (cancel)="onCancel()"
+  >
+  </tam-movie-detail>
+</div>
