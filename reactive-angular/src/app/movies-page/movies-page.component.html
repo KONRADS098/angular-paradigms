@@ -1,7 +1,7 @@
 <div class="container">
   <tam-movies-list
     class="col-50"
-    [movies]="movies"
+    [movies]="movies$ | async"
     (select)="onSelect($event)"
     (delete)="onDelete($event)"
   >
@@ -9,7 +9,7 @@
 
   <tam-movie-detail
     class="col-50"
-    [movie]="currentMovie"
+    [movie]="currentMovie$ | async"
     (save)="onSave($event)"
     (cancel)="onCancel()"
   >

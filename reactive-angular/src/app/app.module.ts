@@ -15,6 +15,8 @@ import { MoviesPageComponent } from './movies-page/movies-page.component';
 import { MovieDetailComponent } from './components/movie-detail/movie-detail.component';
 import { MoviesListComponent } from './components/movies-list/movies-list.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MoviesApiEffects } from './movie-api.effects';
+import { SharedStateMoviesModule } from './state';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     RouterModule.forRoot([
       { path: '', pathMatch: 'full', component: MoviesPageComponent },
     ]),
+    EffectsModule.forFeature([MoviesApiEffects]),
     MatCardModule,
     MatInputModule,
     MatButtonModule,
@@ -37,6 +40,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatListModule,
     StoreModule.forRoot({}, {}),
     EffectsModule.forRoot([]), 
+    SharedStateMoviesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

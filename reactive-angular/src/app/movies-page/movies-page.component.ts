@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { MovieModel } from '../models/movie.model';
-import { MoviesService } from '../services/movies.service';
+import { Store } from '@ngrx/store';
+import { MoviesPageActions } from '../actions';
+import { Observable } from 'rxjs';
+import { selectActiveMovie, selectAllMovies } from '../state';
 
 @Component({
   selector: 'tam-movies-page',
@@ -8,24 +11,20 @@ import { MoviesService } from '../services/movies.service';
   styleUrls: ['./movies-page.component.scss']
 })
 export class MoviesPageComponent implements OnInit {
-  movies: MovieModel[] = [];
-  currentMovie: MovieModel | null = null;
+  movies$: Observable<MovieModel[]>;
+  currentMovie$: Observable<MovieModel | null>;
 
-  constructor(private moviesService: MoviesService) {}
-
-  ngOnInit() {
-    this.getMovies();
-    this.removeSelectedMovie();
+  constructor(private store: Store) {
+    this.movies$ = store.select(selectAllMovies);
+    this.currentMovie$ = store.select(selectActiveMovie);
   }
 
-  getMovies() {
-    this.moviesService.all().subscribe((movies) => {
-      this.movies = movies;
-    });
+  ngOnInit() {
+    this.store.dispatch(MoviesPageActions.enter());
   }
 
   onSelect(movie: MovieModel) {
-    this.currentMovie = movie;
+    this.store.dispatch(MoviesPageActions.selectMovie({ movieId: movie.id }));
   }
 
   onCancel() {
@@ -33,7 +32,7 @@ export class MoviesPageComponent implements OnInit {
   }
 
   removeSelectedMovie() {
-    this.currentMovie = null;
+    this.store.dispatch(MoviesPageActions.clearSelectedMovie());
   }
 
   onSave(movie: MovieModel) {
@@ -45,23 +44,14 @@ export class MoviesPageComponent implements OnInit {
   }
 
   saveMovie(movie: MovieModel) {
-    this.moviesService.create(movie).subscribe(() => {
-      this.getMovies();
-      this.removeSelectedMovie();
-    });
+    this.store.dispatch(MoviesPageActions.createMovie({ movie: movie }));
   }
 
   updateMovie(movie: MovieModel) {
-    this.moviesService.update(movie.id, movie).subscribe(() => {
-      this.getMovies();
-      this.removeSelectedMovie();
-    });
+    this.store.dispatch(MoviesPageActions.updateMovie({ movieId: movie.id, changes: movie }));
   }
 
   onDelete(movie: MovieModel) {
-    this.moviesService.delete(movie.id).subscribe(() => {
-      this.getMovies();
-      this.removeSelectedMovie();
-    });
+    this.store.dispatch(MoviesPageActions.deleteMovie({ movieId: movie.id }));
   }
 }
