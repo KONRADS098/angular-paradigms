@@ -6,7 +6,7 @@ import { selectActiveMovie, selectAllMovies } from '../../../../shared-state';
 import { MoviesPageActions } from 'src/app/movies-page/actions';
 
 @Component({
-  selector: 'tam-movies-page',
+  selector: 'ram-movies-page',
   templateUrl: './movies-page.component.html',
   styleUrls: ['./movies-page.component.scss']
 })

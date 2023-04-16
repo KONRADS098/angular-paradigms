@@ -1,17 +1,17 @@
 <div class="container">
-  <tam-movies-list
+  <ram-movies-list
     class="col-50"
     [movies]="movies$ | async"
     (select)="onSelect($event)"
     (delete)="onDelete($event)"
   >
-  </tam-movies-list>
+  </ram-movies-list>
 
-  <tam-movie-detail
+  <ram-movie-detail
     class="col-50"
     [movie]="currentMovie$ | async"
     (save)="onSave($event)"
     (cancel)="onCancel()"
   >
-  </tam-movie-detail>
+  </ram-movie-detail>
 </div>

@@ -2,7 +2,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { MovieModel } from 'src/app/shared-models/src/lib/movie.model';
 
 @Component({
-  selector: 'tam-movies-list',
+  selector: 'ram-movies-list',
   templateUrl: './movies-list.component.html',
   styleUrls: ['./movies-list.component.scss']
 })

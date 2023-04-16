@@ -3,7 +3,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 import { MovieModel } from 'src/app/shared-models/src/lib/movie.model';
 
 @Component({
-  selector: 'tam-movie-detail',
+  selector: 'ram-movie-detail',
   templateUrl: './movie-detail.component.html',
   styleUrls: ['./movie-detail.component.scss']
 })
