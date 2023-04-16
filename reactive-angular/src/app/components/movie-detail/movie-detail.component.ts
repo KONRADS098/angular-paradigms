@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { MovieModel } from 'src/app/models/movie.model';
+import { MovieModel } from 'src/app/shared-models/src/lib/movie.model';
 
 @Component({
   selector: 'tam-movie-detail',

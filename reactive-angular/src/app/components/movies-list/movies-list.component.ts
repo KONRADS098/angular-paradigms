@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { MovieModel } from 'src/app/models/movie.model';
+import { MovieModel } from 'src/app/shared-models/src/lib/movie.model';
 
 @Component({
   selector: 'tam-movies-list',

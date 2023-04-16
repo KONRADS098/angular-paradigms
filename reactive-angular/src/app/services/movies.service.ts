@@ -3,7 +3,7 @@ import { Observable, of } from 'rxjs';
 
 import { v4 as uuidv4 } from 'uuid';
 
-import { MovieModel } from '../models/movie.model';
+import { MovieModel } from '../shared-models/src/lib/movie.model';
 
 @Injectable({
   providedIn: 'root'
