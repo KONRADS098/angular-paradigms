@@ -28,18 +28,23 @@ export class MoviesService {
       id: uuidv4(),
       ...movieWithoutId,
     };
-    this.movies.push(newMovie);
+    this.movies = [...this.movies, newMovie];
     return of(newMovie);
   }
 
-  update(id: string, updates: MovieModel): Observable<MovieModel | null> {
-    const movie = this.movies.find(m => m.id === id);
-    if (movie) {
-      Object.assign(movie, updates);
-      return of(movie);
-    } else {
-      return of(null);
+  update(id: string, updates: MovieModel): Observable<MovieModel> {
+    const movieIndex = this.movies.findIndex(m => m.id === id);
+    
+    if (movieIndex < 0) {
+      return of(updates);
     }
+  
+    this.movies[movieIndex] = {
+      ...this.movies[movieIndex],
+      ...updates,
+    };
+
+    return of(this.movies[movieIndex]);
   }
 
   delete(id: string): Observable<any> {
