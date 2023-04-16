@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { MovieModel } from '../shared-models/src/lib/movie.model';
+import { MovieModel } from '../../../../shared-models/src/lib/movie.model';
 import { Store } from '@ngrx/store';
-import { MoviesPageActions } from '../actions';
 import { Observable } from 'rxjs';
-import { selectActiveMovie, selectAllMovies } from '../shared-state';
+import { selectActiveMovie, selectAllMovies } from '../../../../shared-state';
+import { MoviesPageActions } from 'src/app/movies-page/actions';
 
 @Component({
   selector: 'tam-movies-page',
