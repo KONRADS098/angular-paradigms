@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { createEffect, Actions, ofType } from '@ngrx/effects';
 import { mergeMap, map, exhaustMap, concatMap } from 'rxjs/operators';
-import { MoviesService } from '../../../shared-services/src';
-import { MoviesPageActions, MoviesApiActions } from '../../actions';
+import { MoviesApiActions, MoviesPageActions } from '@ram/movies-page-actions';
+import { MoviesService } from '@ram/shared-services';
 
 @Injectable()
 export class MoviesApiEffects {

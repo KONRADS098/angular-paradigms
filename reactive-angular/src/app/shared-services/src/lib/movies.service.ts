@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
+import { MovieModel } from '@ram/shared-models';
 import { Observable, of } from 'rxjs';
 
 import { v4 as uuidv4 } from 'uuid';
-
-import { MovieModel } from 'src/app/shared-models/src';
 
 @Injectable({
   providedIn: 'root'

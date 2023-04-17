@@ -1,5 +1,5 @@
 import { createAction, props } from '@ngrx/store';
-import { MovieModel } from 'src/app/shared-models/src/lib/movie.model';
+import { MovieModel } from '@ram/shared-models';
 
 export const enter = createAction('[Movies Page] Enter');
 

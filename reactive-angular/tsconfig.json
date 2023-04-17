@@ -22,7 +22,14 @@
     "lib": [
       "ES2022",
       "dom"
-    ]
+    ], 
+    "paths": {
+      "@ram/shared-models": ["src/app/shared-models/src/index.ts"],
+      "@ram/shared-services": ["src/app/shared-services/src/index.ts"], 
+      "@ram/shared-state": ["src/app/shared-state/src/index.ts"], 
+      "@ram/movies-page": ["src/app/movies-page/src/index.ts"],
+      "@ram/movies-page-actions": ["src/app/movies-page/actions/src/index.ts"] 
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

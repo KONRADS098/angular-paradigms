@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { MovieModel } from 'src/app/shared-models/src/lib/movie.model';
+import { MovieModel } from '@ram/shared-models';
 
 @Component({
   selector: 'ram-movie-detail',

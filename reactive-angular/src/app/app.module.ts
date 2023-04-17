@@ -6,7 +6,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { RouterModule } from '@angular/router';
-import { MoviesApiEffects } from './movies-page/src/lib/movie-api.effects';
 
 @NgModule({
   declarations: [
@@ -20,10 +19,9 @@ import { MoviesApiEffects } from './movies-page/src/lib/movie-api.effects';
         path: '',
         pathMatch: 'full',
         loadChildren: () =>
-          import('./movies-page/src/lib/movies.page.module').then((m) => m.MoviesPageModule),
+          import('@ram/movies-page').then((m) => m.MoviesPageModule),
       },
     ]),
-    EffectsModule.forFeature([MoviesApiEffects]),
     StoreModule.forRoot({}, {}),
     EffectsModule.forRoot([]), 
   ],

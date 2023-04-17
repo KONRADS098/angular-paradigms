@@ -1,4 +1,3 @@
-import { SharedStateMoviesModule } from "src/app/shared-state";
 import { MovieDetailComponent } from "./movie-detail/movie-detail.component";
 import { MoviesListComponent } from "./movies-list/movies-list.component";
 import { MoviesPageComponent } from "./movies-page/movies-page.component";
@@ -13,6 +12,7 @@ import { MatInputModule } from "@angular/material/input";
 import { MatListModule } from "@angular/material/list";
 import { EffectsModule } from "@ngrx/effects";
 import { MoviesApiEffects } from "./movie-api.effects";
+import { SharedStateMoviesModule } from "src/app/shared-state/src";
 
 @NgModule({
     imports: [

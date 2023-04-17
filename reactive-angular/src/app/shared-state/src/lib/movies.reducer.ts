@@ -1,6 +1,6 @@
-import { createReducer, on, Action, createSelector } from '@ngrx/store';
-import { MoviesApiActions, MoviesPageActions } from 'src/app/movies-page/actions';
-import { MovieModel } from 'src/app/shared-models/src/lib/movie.model';
+import { createReducer, on, createSelector } from '@ngrx/store';
+import { MoviesApiActions, MoviesPageActions } from '@ram/movies-page-actions';
+import { MovieModel } from '@ram/shared-models';
 
 const createMovie = (movies: MovieModel[], movie: MovieModel) => [...movies, movie];
 const updateMovie = (movies: MovieModel[], changes: MovieModel) =>
