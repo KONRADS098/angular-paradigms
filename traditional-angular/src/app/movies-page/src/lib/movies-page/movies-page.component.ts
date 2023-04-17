@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MovieModel } from '../models/movie.model';
-import { MoviesService } from '../services/movies.service';
+import { MovieModel } from '@ram/shared-models';
+import { MoviesService } from '@ram/shared-services';
 
 @Component({
   selector: 'tam-movies-page',
