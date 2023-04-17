@@ -12,7 +12,7 @@ import { MatInputModule } from "@angular/material/input";
 import { MatListModule } from "@angular/material/list";
 import { EffectsModule } from "@ngrx/effects";
 import { MoviesApiEffects } from "./movie-api.effects";
-import { SharedStateMoviesModule } from "src/app/shared-state/src";
+import { SharedStateMoviesModule } from "@ram/shared-state";
 
 @NgModule({
     imports: [
