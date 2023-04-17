@@ -53,9 +53,7 @@ describe('MoviesPageComponent', () => {
       ],
     })
     .compileComponents();
-  });
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(MoviesPageComponent);
     component = fixture.componentInstance;
     store = TestBed.inject(MockStore);
