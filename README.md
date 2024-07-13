@@ -3,7 +3,9 @@ This repository contains two Angular applications that demonstrate the differenc
 
 If you prefer to read the research paper in `pdf` format, you can click the cover image below to open it.
 
-[![Cover Image](/assets/img/cover.png)](assets/docs/traditional-vs-reactive-angular.pdf)
+<a href="assets/docs/traditional-vs-reactive-angular.pdf">
+  <img src="assets/img/cover.png" alt="Cover Image" height="300">
+</a>
 
 # Table of contents
 - [Disclaimer](#disclaimer)
