@@ -1,7 +1,9 @@
 # Traditional vs. Reactive Angular
 This repository contains two Angular applications that demonstrate the differences between Traditional and Reactive Angular development approaches. The applications are built using Angular 15 and aim to showcase how each approach impacts code quality, testability, and debuggability.
 
-If you prefer to read the research paper in `pdf` format, you can find it [here](/traditional-vs-reactive-angular.pdf)
+If you prefer to read the research paper in `pdf` format, you can click the cover image below to open it.
+
+[![Cover Image](/assets/img/cover.png)](assets/docs/traditional-vs-reactive-angular.pdf)
 
 # Table of contents
 - [Disclaimer](#disclaimer)
